@@ -1,0 +1,93 @@
+/* Estilos específicos para a página de FAQ */
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.faq-item {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.faq-question {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.faq-toggle {
+  font-size: 24px;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 20px 20px;
+  max-height: 200px;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.contact-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-cta p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.contact-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  .faq-question h3 {
+    font-size: 16px;
+  }
+}
