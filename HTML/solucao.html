@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução - AquaAlert</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/solucao.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../img/logo.png" alt="AquaAlert"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="solucao.html">Solução</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="menu-mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="solution-intro">
+                <h1>Solução:</h1>
+                <p class="solution-description">
+                    A AquaAlert é uma plataforma inteligente que combina tecnologia de monitoramento, 
+                    modelos preditivos e comunicação direta para proteger a população em áreas de risco.
+                </p>
+                
+                <h2>Funcionalidades:</h2>
+            </div>
+
+            <div class="features-grid">
+                <!-- Card 1: Monitoramento em Tempo Real -->
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <span class="icon">💧</span>
+                    </div>
+                    <h3>Monitoramento em Tempo Real</h3>
+                    <p>Acompanhe dados atualizados sobre chuvas e níveis de água na sua região.</p>
+                    
+                    <div class="metrics">
+                        <div class="metric">
+                            <span class="metric-icon">☁️</span>
+                            <span class="metric-label">Nível de Chuva:</span>
+                            <span class="metric-value" id="rain-level">36.6 mm</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-icon">💧</span>
+                            <span class="metric-label">Nível da Água:</span>
+                            <span class="metric-value" id="water-level">107.1 cm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Previsão de Risco -->
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <span class="icon">⚠️</span>
+                    </div>
+                    <h3>Previsão de Risco de Inundação</h3>
+                    <p>Receba previsões simples e rápidas sobre o risco de enchentes na sua área.</p>
+                    
+                    <div class="risk-indicator">
+                        <p>Exemplo: <span class="risk-level medium">⚠️ Médio</span></p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Alertas Geolocalizados -->
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <span class="icon">📍</span>
+                    </div>
+                    <h3>Alertas Geolocalizados</h3>
+                    <p>Notificações personalizadas com base na sua localização, direto no seu celular.</p>
+                    
+                    <div class="location-search">
+                        <input type="text" id="location-input" placeholder="Digite sua cidade ou CEP" class="form-control">
+                        <button id="check-location" class="btn btn-primary">Verificar</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Mapa Interativo -->
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <span class="icon">🗺️</span>
+                    </div>
+                    <h3>Mapa Interativo</h3>
+                    <p>Visualize áreas de risco e encontre rotas seguras.</p>
+                    
+                    <div class="map-button">
+                        <button id="view-map" class="btn btn-primary">Ver Mapa</button>
+                    </div>
+                </div>
+
+                <!-- Card 5: Abrigos Temporários -->
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <span class="icon">🏠</span>
+                    </div>
+                    <h3>Abrigos Temporários</h3>
+                    <p>Encontre abrigos próximos com informações atualizadas.</p>
+                    
+                    <div class="shelters-list">
+                        <ul>
+                            <li>🏠 Abrigo Central</li>
+                            <li>🏫 Escola Municipal</li>
+                            <li>⛪ Igreja São José</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6: Relatos de Incidentes -->
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <span class="icon">💬</span>
+                    </div>
+                    <h3>Relatos de Incidentes</h3>
+                    <p>Contribua com a comunidade enviando relatos via nosso chatbot.</p>
+                    
+                    <div class="chatbot-button">
+                        <button id="access-chatbot" class="btn btn-primary">Acessar Chatbot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 AquaAlert - Projeto Global Solution FIAP</p>
+    </footer>
+
+    <!-- Modal para o Mapa -->
+    <div id="map-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Mapa de Áreas de Risco</h2>
+            <div class="map-container">
+                <div class="map-placeholder-message">
+                    <h3>Mapa em desenvolvimento</h3>
+                    <p>O mapa interativo está sendo implementado e estará disponível em breve.</p>
+                    <p>Esta funcionalidade permitirá visualizar áreas de risco, rotas de evacuação e abrigos próximos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para o Chatbot -->
+    <div id="chatbot-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Chatbot AquaAlert</h2>
+            <div class="chatbot-container">
+                <div class="chat-messages">
+                    <div class="message development">
+                        <strong>⚠️ CHATBOT EM DESENVOLVIMENTO ⚠️</strong><br>
+                        Esta funcionalidade está sendo implementada e será integrada posteriormente.
+                        <br><br>
+                        Em breve você poderá relatar alagamentos, receber alertas e obter informações sobre rotas seguras.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/solucao.js"></script>
+</body>
+</html>
