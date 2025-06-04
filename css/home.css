@@ -1,0 +1,57 @@
+/* Estilos específicos para a página inicial */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.hero-logo {
+  width: 300px;
+  max-width: 80%;
+  animation: fadeIn 1s ease;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.cta-container .btn {
+  padding: 15px 60px;
+  font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-logo {
+    width: 250px;
+  }
+}
