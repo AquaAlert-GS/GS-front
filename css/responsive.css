@@ -1,0 +1,77 @@
+/* Estilos responsivos e melhorias*/
+
+/* Estilos para o logo */
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Estilos para animação de atualização de dados */
+.updated {
+  animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+  0% { color: var(--text-color); }
+  50% { color: var(--primary-color); }
+  100% { color: var(--text-color); }
+}
+
+/* Estilos para o menu mobile quando ativo */
+.menu-mobile.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-mobile.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-mobile.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Melhorias de acessibilidade */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(101, 178, 230, 0.5);
+}
+
+/* Melhorias para dispositivos móveis */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .feature-card {
+    padding: 20px;
+  }
+  
+  .team-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Melhorias para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .team-photo {
+    width: 130px;
+    height: 130px;
+  }
+}
